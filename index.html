@@ -1,1 +1,88 @@
-hi akhil iam master branch iam getting data to 
+<!-- HTML: Responsive Dashboard -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <title>Responsive Dashboard</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Course Progress Section -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm progress-box">
+                    <div class="card-body text-center">
+                        <h5>Course Progress By Schedule</h5>
+                        <div class="progress-circle">
+                            <span class="progress-value">150</span>
+                            <p>Java Full Stack with React</p>
+                        </div>
+                        <div class="progress-status">
+                            <span class="text-danger">40 As per schedule</span><br>
+                            <span class="text-primary">50 Ahead of schedule</span><br>
+                            <span class="text-secondary">60 Lagging behind</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm progress-box">
+                    <div class="card-body text-center">
+                        <h5>Course Completion Progress</h5>
+                        <div class="progress-circle">
+                            <span class="progress-value">150</span>
+                            <p>Total students</p>
+                        </div>
+                        <div class="progress-status">
+                            <span class="text-success">10 Course completed</span><br>
+                            <span class="text-secondary">140 Course not completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="card shadow-sm progress-box">
+                    <div class="card-body text-center">
+                        <h5>Project Progress</h5>
+                        <div class="d-flex justify-content-around">
+                            <div class="progress-detail">
+                                <div class="bar not-started"></div>
+                                <span>70 Not started</span>
+                            </div>
+                            <div class="progress-detail">
+                                <div class="bar in-progress"></div>
+                                <span>70 In progress</span>
+                            </div>
+                            <div class="progress-detail">
+                                <div class="bar completed"></div>
+                                <span>10 Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Module Progress Section -->
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>Module Progress</h5>
+                        <canvas id="moduleProgressChart"></canvas>
+                        <p class="text-center mt-2">Click on the graph bar to check the student list</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
