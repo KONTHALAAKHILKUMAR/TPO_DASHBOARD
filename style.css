@@ -1,4 +1,4 @@
-/* CSS: Responsive Dashboard Styles */
+/* 
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -80,4 +80,134 @@ body {
         height: 80px;
         font-size: 1.2em;
     }
+}
+ */
+/* 
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.progress-box {
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .progress-box {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body h5 {
+        font-size: 1rem;
+    }
+    
+    .progress-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2em;
+    }
+}
+
+.bar {
+    width: 40px;
+    height: 70px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.not-started {
+    background-color: #dc3545;
+}
+
+.in-progress {
+    background-color: #0d6efd;
+}
+
+.completed {
+    background-color: #20c997;
+}
+
+.text-center {
+    text-align: center;
+}
+ */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.progress-box {
+    height: 100%;
+}
+
+.progress-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ff6f61 0% 40%,
+        #0d6efd 40% 90%,
+        #6c757d 90% 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .progress-box {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body h5 {
+        font-size: 1rem;
+    }
+    
+    .progress-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2em;
+    }
+}
+
+.bar {
+    width: 40px;
+    height: 70px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.not-started {
+    background-color: #dc3545;
+}
+
+.in-progress {
+    background-color: #0d6efd;
+}
+
+.completed {
+    background-color: #20c997;
+}
+
+.text-center {
+    text-align: center;
 }

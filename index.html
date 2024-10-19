@@ -1,4 +1,3 @@
-<!-- HTML: Responsive Dashboard -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,63 +9,52 @@
 </head>
 <body>
     <div class="container mt-4">
+    
         <!-- Course Progress Section -->
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card shadow-sm progress-box">
                     <div class="card-body text-center">
                         <h5>Course Progress By Schedule</h5>
-                        <div class="progress-circle">
-                            <span class="progress-value">150</span>
-                            <p>Java Full Stack with React</p>
-                        </div>
-                        <div class="progress-status">
-                            <span class="text-danger">40 As per schedule</span><br>
-                            <span class="text-primary">50 Ahead of schedule</span><br>
-                            <span class="text-secondary">60 Lagging behind</span>
-                        </div>
+                        <canvas id="courseProgressScheduleChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card shadow-sm progress-box">
-                    <div class="card-body text-center">
-                        <h5>Course Completion Progress</h5>
-                        <div class="progress-circle">
-                            <span class="progress-value">150</span>
+            
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <div class="card shadow-sm progress-box">
+                        <div class="card-body text-center">
+                            <h5>Course Completion Progress</h5>
+                            <canvas id="courseCompletionGaugeChart"></canvas>
+                            <h2 class="total-students">150</h2>
                             <p>Total students</p>
-                        </div>
-                        <div class="progress-status">
-                            <span class="text-success">10 Course completed</span><br>
-                            <span class="text-secondary">140 Course not completed</span>
+                            <div class="progress-status">
+                                <div class="status-item">
+                                    <span class="circle green"></span>
+                                    <span class="text-success">10 Course completed</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="circle grey"></span>
+                                    <span class="text-secondary">140 Course not completed</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            
 
             <div class="col-lg-4 col-md-12 mb-4">
                 <div class="card shadow-sm progress-box">
                     <div class="card-body text-center">
                         <h5>Project Progress</h5>
-                        <div class="d-flex justify-content-around">
-                            <div class="progress-detail">
-                                <div class="bar not-started"></div>
-                                <span>70 Not started</span>
-                            </div>
-                            <div class="progress-detail">
-                                <div class="bar in-progress"></div>
-                                <span>70 In progress</span>
-                            </div>
-                            <div class="progress-detail">
-                                <div class="bar completed"></div>
-                                <span>10 Completed</span>
-                            </div>
-                        </div>
+                        <canvas id="projectProgressChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
+    
+
 
         <!-- Module Progress Section -->
         <div class="row">
