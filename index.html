@@ -1,88 +1,102 @@
-<!-- HTML: Responsive Dashboard -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-    <title>Responsive Dashboard</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container mt-4">
-        <!-- Course Progress Section -->
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card shadow-sm progress-box">
-                    <div class="card-body text-center">
-                        <h5>Course Progress By Schedule</h5>
-                        <div class="progress-circle">
-                            <span class="progress-value">150</span>
-                            <p>Java Full Stack with React</p>
-                        </div>
-                        <div class="progress-status">
-                            <span class="text-danger">40 As per schedule</span><br>
-                            <span class="text-primary">50 Ahead of schedule</span><br>
-                            <span class="text-secondary">60 Lagging behind</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card shadow-sm progress-box">
-                    <div class="card-body text-center">
-                        <h5>Course Completion Progress</h5>
-                        <div class="progress-circle">
-                            <span class="progress-value">150</span>
-                            <p>Total students</p>
-                        </div>
-                        <div class="progress-status">
-                            <span class="text-success">10 Course completed</span><br>
-                            <span class="text-secondary">140 Course not completed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-12 mb-4">
-                <div class="card shadow-sm progress-box">
-                    <div class="card-body text-center">
-                        <h5>Project Progress</h5>
-                        <div class="d-flex justify-content-around">
-                            <div class="progress-detail">
-                                <div class="bar not-started"></div>
-                                <span>70 Not started</span>
-                            </div>
-                            <div class="progress-detail">
-                                <div class="bar in-progress"></div>
-                                <span>70 In progress</span>
-                            </div>
-                            <div class="progress-detail">
-                                <div class="bar completed"></div>
-                                <span>10 Completed</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- First Section: Go Back, Course Name, Program Name, University Name -->
+    <div class="header">
+        <div class="go-back">
+            <i class="fa-solid fa-arrow-left"></i> Go Back
         </div>
-
-        <!-- Module Progress Section -->
-        <div class="row">
-            <div class="col-12 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5>Module Progress</h5>
-                        <canvas id="moduleProgressChart"></canvas>
-                        <p class="text-center mt-2">Click on the graph bar to check the student list</p>
-                    </div>
-                </div>
-            </div>
+        <div class="course-info">
+            <div class="course-name">Course Name: Java Full Stack with React</div>
+            <div class="program-name">Programs: Java Full Stack with React(Year 2019-2023 | Sem 1-4)</div>
+            <div class="university-name">University Name: ID - ABC Tech College</div>
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Second Section: Progress by Schedule, Course Completion, Project Progress -->
+    <div class="progress-section">
+        <div class="progress-card card1">
+            <h3 class="progress-heading heading1">Course Progress By Schedule</h3>
+            <div class="progress-container">
+                <div class="progress-chart">
+                    <canvas id="schedule-progress" width="400" height="200"></canvas>
+                    <p class="course-info" style="position: absolute; top: 40%; left: 55%; transform: translate(-50%, -50%); font-size: 9px;
+                          font-weight: bold; text-align: center; max-width: 120px; white-space: normal; line-height: 1.2;">
+                        150 <br /> Java Full Stack <br /> with React
+                    </p>
+                </div>
+                <div class="course-progress">
+                    <p class="legend"><span class="circle blue">40</span> <a href="#" class="legend-link">As per schedule</a></p>
+                    <p class="legend"><span class="circle purple">50</span> <a href="#" class="legend-link">AheadOfSchedule</a></p>
+                    <p class="legend"><span class="circle red">60</span> <a href="#" class="legend-link">Lagging behind</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-card card2">
+    <h3 class="course-heading heading1" style="text-align: left;font-size:14px;">Course Completion Progress</h3>
+
+<div class="courseblock">
+    <div class="coursechart">
+        <canvas id="completion-progress"></canvas>
+        <p class="coursecompletion" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  font-weight: bold; text-align: center; max-width: 120px; white-space: normal; line-height: 0.8;">
+            <br /><span style="font-size:28px;">150</span><br/>
+            <br /><span style="opacity:50%;">Total Students</span> <br/>
+        </p>
+    </div>
+
+    <div class="progress-info">
+        <p class="legend">
+            <span class="circle green">10</span>
+            <a href="#" class="legend-link">Course completed</a>
+        </p>
+        <p class="legend">
+            <span class="circle gray">140</span>
+            <a href="#" class="legend-link">Course not completed</a>
+        </p>
+    </div>
+</div>
+</div>
+
+        
+        
+        <div class="project-progress">
+            <h3 class="progress-heading heading1">Project Progress</h3>
+            <div class="project">
+                <canvas id="project-progress" width="400" height="155"></canvas>
+            </div>
+            <div class="projectprogress-legend">
+                <p class="legend"><span class="circle red">70</span> <a href="#" class="legend-link">Not Started</a></p>
+                <p class="legend"><span class="circle blue">70</span> <a href="#" class="legend-link">In progress</a></p>
+                <p class="legend"><span class="circle green">10</span> <a href="#" class="legend-link">Completed</a></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Third Section: Module Progress -->
+    <div class="module-section">
+        <h3>Module Progress</h3>
+        <div class="chart-container" style="position: relative; width: 100%; height: 200px;">
+            <!-- Canvas for Module Progress Graph -->
+            <canvas id="module-progress" width="400" height="100"></canvas>
+            <!-- Legend will be dynamically generated here -->
+            <div id="custom-legend" style="position: absolute; top: 5px; right: 10px;"></div>
+        </div>
+    </div>
+    
+    
+    
 </body>
 </html>

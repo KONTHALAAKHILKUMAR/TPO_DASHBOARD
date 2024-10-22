@@ -1,83 +1,302 @@
-/* CSS: Responsive Dashboard Styles */
+/* General body and container styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
 }
 
-.card {
-    border-radius: 10px;
-    border: none;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.progress-box {
-    height: 100%;
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-size: smaller;
+    margin-bottom: 5px;
+    margin-top:8px; /* Add margin to push content down */
 }
 
-.progress-circle {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    background: conic-gradient(
-        #ff6f61 0% 40%,
-        #0d6efd 40% 90%,
-        #6c757d 90% 100%
-    );
+.go-back {
+    width: 82px;
+    height: 21px;
+    font-size: medium;
+    color: black;
     display: flex;
     align-items: center;
+    padding-left:20px;
+}
+
+.course-info {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    padding-right: 20px;
+}
+
+.course-info div {
+    padding: 3px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.course-name {
+    background-color: #6465ff;
+    width: 253px;
+    height: 37px;
+}
+
+.program-name {
+    background-color: #01c1e4;
+    width: 385px;
+    height: 37px;
+}
+
+.university-name {
+    background-color: #fcbb43;
+    width: 239px;
+    height: 37px;
+}
+
+/* Progress Section Styling */
+.progress-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: -15px;
+    height:237px;
+    gap:2px;
+}
+
+/* .heading1{
+   
+} */
+.progress-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* padding: 20px; */
+    
+}
+.card1{
+    width: 32%;
+    margin-right:-5px;
+    padding-left: 15px;
+}
+
+.card2{
+    width: 22%;
+    /* margin:3px; */
+    padding-left: 15px;
+}
+
+.progress-info{
+    margin-top:-30px;
+}
+
+.project-progress{
+background-color: white;
+border-radius: 10px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+width:33%;
+/* width: Fixed (426px)px; */
+height: Fixed (237px)px;
+top: 192px;
+left: 793px;
+padding: 4px 0px px 10px;
+gap: 10px;
+border-radius: 10px ;
+opacity: 0px;
+
+}
+
+.progress-card .card1{
+      
+/* width: Fixed (265px)px; */
+height: Fixed (237px)px;
+top: 192px;
+left: 507px;
+padding: 20px 0px 0px 0px;
+gap: 6px;
+border-radius: 10px 0px 0px 0px;
+opacity: 0px;
+
+
+}
+
+.progress-heading {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-chart {
+    width: 50%;
+    height: 150px;
+    position: relative;
+}
+
+.courseblock{
+    /* width: 220px;
+    height:10px; */
+    margin-top: 10px;
+    ;
+}
+.coursechart {
+    width: 190px; /* Decreased width */
+    height: 180px; /* Decreased height */
+    margin: 0 auto; /* Center the chart */
+    margin-top: -50px;
+    position: relative;
+    padding-left: 20px; /* Add padding on the left */
+    padding-right: 20px; /* Add padding on the right */
+}
+
+canvas {
+    width: 100% !important; /* Ensure the canvas fills the container */
+    height: 100% !important;
+    border: 10px;
+}
+
+
+.course-progress {
+    width: 70%;
+    padding-left: 1px;
+}
+
+.course-heading{
+    text-align: left;
+    size: 14px;
+    padding-left: 25px;
+}
+
+.progress-heading{
+    text-align: left;
+    size: 14px;
+}
+/* Legend styling */
+.legend {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.legend .circle {
+    width: 28px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 9px;
+    margin-left: 20px;
+}
+/* .project-progress-legend{
+
+} */
+ .project{
+    width: 400px;
+    padding:0px 0px 0px 40px;
+    margin-bottom: 5px;
+
+ }
+.legend-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.blue { background-color: #0000ff; color: white; }
+.purple { background-color: #9b59b6; color: white; }
+.red { background-color: #e74c3c; color: white; }
+.green { background-color: #27ae60; color: white; }
+.gray { background-color: #95a5a6; color: white; }
+
+/* Module Section Styling */
+.module-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.projectprogress-legend {
+    display: flex;
+justify-content: flex-start; /* Adjust this if you want to change spacing */
+align-items: center;
+gap: 3px; 
+padding-bottom:20px;
+}
+/* Custom Legend */
+#custom-legend {
+    display: flex;
     justify-content: center;
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
-.progress-value {
-    position: absolute;
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
 }
 
-.progress-status span {
-    display: block;
-    margin: 5px 0;
+.legend-box {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
 }
 
-.progress-detail {
-    text-align: center;
-}
-
-.bar {
-    width: 40px;
-    height: 70px;
-    border-radius: 5px;
-    margin: 0 auto;
-}
-
-.not-started {
-    background-color: #dc3545;
-}
-
-.in-progress {
-    background-color: #0d6efd;
-}
-
-.completed {
-    background-color: #20c997;
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .progress-box {
+    .progress-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-card, .project-progress {
+        width: 100%;
         margin-bottom: 20px;
     }
-}
 
-@media (max-width: 576px) {
-    .card-body h5 {
-        font-size: 1rem;
+    .progress-container {
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .progress-circle {
-        width: 80px;
-        height: 80px;
-        font-size: 1.2em;
+
+    .progress-chart, .course-progress {
+        width: 100%;
+        text-align: center;
+    }
+
+    .course-progress {
+        margin-top: 15px;
+    }
+
+    .projectprogress-legend {
+        display: flex;
+    justify-content: space-around; /* Adjust this if you want to change spacing */
+    align-items: center;
+    gap: 20px; 
+    }
+
+    .legend {
+        margin-bottom: 10px;
     }
 }
